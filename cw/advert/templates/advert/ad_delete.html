@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block menu %}    
+{% endblock %}
+{% block content %}
+<h1>Вы точно хотите удалить своё объявление?</h1>
+<form method="POST" action="{% url 'advert:advert_delete' advert.pk %}">
+    {% csrf_token %}
+        <p><input type="submit" value="Confirm"></p>
+        <p><a href="{% url 'advert:advert_list' %}">Cancel</a></p>
+</form>
+{% endblock %}
