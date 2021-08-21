@@ -54,3 +54,11 @@ class Advert(models.Model):
         blank=True,
         null=True
     )
+
+    class Meta:
+        db_table = 'adverts'
+        verbose_name = 'Объявление'
+        verbose_name_plural = 'Объявления'
+        permissions = [
+        ('moderate', 'Moderated user or not')
+    ]
