@@ -11,4 +11,3 @@ class AdvertUpdate(UpdateView):
 
     def form_valid(self, form):
         advert = form.save(commit=False)
-        advert = moderated_at(False)

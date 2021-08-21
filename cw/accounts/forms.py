@@ -36,14 +36,3 @@ class MyUserCreationForm(forms.ModelForm):
         model = User
         fields = ['username', 'password', 'password_confirm', 'first_name', 'last_name', 'email']
 
-class ProfileUpdateForm(forms.ModelForm):
-
-    class Meta:
-        model = Profile
-        exclude = ('user',)
-
-class UserUpdateFrom(forms.ModelForm):
-
-    class Meta:
-        model = get_user_model()
-        fields = ('email', 'first_name', 'last_name')

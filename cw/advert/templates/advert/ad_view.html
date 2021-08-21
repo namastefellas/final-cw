@@ -8,12 +8,12 @@
                 <img class="avatar" src="{{ advert.picture.url }}" width="250" height="250" alt="user picture">             
             <h5 class="card-title">{{ advert.title }}</h5>
             <p class="card-text">{{ advert.text }}</p>
-            {% if price %}
+            {% if advert.price %}
             <p class="card-text">{{ advert.price }}</p>
             {% else %}
             <p class="card-text">Цена договорная</p>
             {% endif %}
-            {% if user.is_authenticated %}
+            {% if user == advert.user %}
             <a href="{% url 'advert:advert_edit' advert.pk %}">Редактировать</a> 
             {% endif %}     
             </div> 

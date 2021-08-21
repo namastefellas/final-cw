@@ -18,7 +18,6 @@
             {% if user.is_authenticated %}
                 <li><a href="{% url 'accounts:logout' %}">Выйти</a></li>
                 <li><a href="{% url 'accounts:user_profile' user.pk %}">Профиль</a></li>
-                <li><a href="#">Редактировать Профиль</a></li>
                 <li><a href="{% url 'advert:advert_create' %}">Создать Объявление</a></li>
             {% else %}
             <li class="menu-right"><a href="{% url 'accounts:login' %}" class="nav-link">Логин</a></li>

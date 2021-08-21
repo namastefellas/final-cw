@@ -1,22 +1,23 @@
 {% if not adverts %}
 <h2 class="text-center">У пользователя нет объявлений</h2>
-{% endif %}
+{% else %}
 
 {% for advert in adverts %}
-<br>
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h3 class="card-title"><a href="{% url 'webapp:project_detail' project.pk %}">{{ project.name }}</a></h3>
-    <p>({{ advert.title }})</p>
-    {% if perms.advert.change_advert and request.user in advert.user.all %}
-        <p class="card-title"><a href="{% url 'advert:advert_edit' advert.pk %}">Редактировать</a></p>
+<div class="card mb-2" style="width: 18rem;">
+    <div class="card-body mb-2">
+        <img class="avatar" src="{{ advert.picture.url }}" width="250" height="250" alt="user picture">
+    <h5 class="card-title">{{ advert.title }}</h5>
+    <a href="{% url 'accounts:user_profile' advert.user.pk %}">{{ advert.user }}</a>
+    {% if price %}
+    <p class="card-text">{{ advert.price }}</p>
+    {% else %}
+    <p class="card-text">Цена договорная</p>
     {% endif %}
-    {% if perms.advert.delete_advert and request.user in advert.user.all %}
-        <p class="card-title"><a href="{% url 'advert:advert_delete' advert.pk %}">Удалить</a></p>
+    {% if user == advert.user %}
+    <a href="{% url 'advert:advert_delete' advert.id %}">Удалить</a>
     {% endif %}
+    <a href="{% url 'advert:advert_view' advert.id %}">Посмотреть</a>
     </div>
 </div>
 {% endfor %}
-{% if is_paginated %}
- {% include 'partial/paginate.html' %}
 {% endif %}

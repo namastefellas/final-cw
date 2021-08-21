@@ -13,12 +13,15 @@
             <div class="card-body mb-2">
                 <img class="avatar" src="{{ advert.picture.url }}" width="250" height="250" alt="user picture">
             <h5 class="card-title">{{ advert.title }}</h5>
+            <a href="{% url 'accounts:user_profile' advert.user.pk %}">{{ advert.user }}</a>
             {% if price %}
             <p class="card-text">{{ advert.price }}</p>
             {% else %}
             <p class="card-text">Цена договорная</p>
             {% endif %}
+            {% if user == advert.user %}
             <a href="{% url 'advert:advert_delete' advert.id %}">Удалить</a>
+            {% endif %}
             <a href="{% url 'advert:advert_view' advert.id %}">Посмотреть</a>
             </div>
         </div>
