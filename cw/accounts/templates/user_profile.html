@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}User Profile{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+    {% if user.profile.avatar %}
+        <img class="avatar" src="{{ user.profile.avatar.url }}" width="250" height="250" alt="user picture">
+    {% endif %}
+    {% if user.profile.description %}
+    {% endif %}
+    <p>Nickname: {{ user.username }}</p>
+    <p>Имя: {{ user.first_name }}</p>
+    <p>Фамилия: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Телефон: {{ user.phone_number }}</p>
+    <h2 class="text-center clear">Объявления:</h2>
+    {% include 'partial/advert-list.html' %}
+{% endblock %}
