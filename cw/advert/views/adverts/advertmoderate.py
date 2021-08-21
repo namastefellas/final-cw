@@ -8,3 +8,7 @@ class AdvertModerate(ListView):
     context_object_name = 'adverts'
     ordering = ('-created_at',)
 
+    def get_queryset(self, *args, **kwargs):
+        queryset = super().get_queryset()
+        queryset = queryset.filter(moderated_at=False)
+        return queryset

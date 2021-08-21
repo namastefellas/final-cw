@@ -9,6 +9,6 @@ class AdvertUpdate(UpdateView):
     template_name = 'advert/ad_edit.html'
     context_object_name = 'advert'
 
-
-    def get_success_url(self):
-        return reverse('advert:advert_list')
+    def form_valid(self, form):
+        advert = form.save(commit=False)
+        advert = moderated_at(False)

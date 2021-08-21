@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.views.generic import CreateView
 from advert.models import Advert
@@ -11,5 +12,6 @@ class AdvertCreate(CreateView):
     def form_valid(self, form):
         user = self.request.user
         advert = form.save(commit=False)
-        advert.user.add(user)
-        return redirect('advert:advert_list', pk=advert.pk)
+        advert.user = user
+        advert.save()
+        return redirect('advert:advert_list')
