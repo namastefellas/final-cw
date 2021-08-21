@@ -1,0 +1,118 @@
+[
+{
+  "model": "advert.advert",
+  "pk": 1,
+  "fields": {
+    "created_at": "2021-08-21T08:29:24.293Z",
+    "updated_at": "2021-08-21T12:26:07.622Z",
+    "publicated_at": "2021-08-21T08:29:49Z",
+    "moderated_at": true,
+    "user": 1,
+    "picture": "pictures/DK6xGeGvzQM.jpg",
+    "title": "Объявление блин!",
+    "text": "Небольшой текст для объявления!",
+    "category": "Other",
+    "price": "500.00"
+  }
+},
+{
+  "model": "advert.advert",
+  "pk": 7,
+  "fields": {
+    "created_at": "2021-08-21T11:53:55.625Z",
+    "updated_at": "2021-08-21T11:54:42.092Z",
+    "publicated_at": "2021-08-21T11:54:04Z",
+    "moderated_at": true,
+    "user": 1,
+    "picture": "pictures/metro-exodus-7c.jpg",
+    "title": "asdfasdfadsfadsf",
+    "text": "dsagasdgsagasgsadg",
+    "category": "Other",
+    "price": null
+  }
+},
+{
+  "model": "advert.advert",
+  "pk": 8,
+  "fields": {
+    "created_at": "2021-08-21T11:57:46.332Z",
+    "updated_at": "2021-08-21T11:58:38.092Z",
+    "publicated_at": null,
+    "moderated_at": false,
+    "user": 1,
+    "picture": "pictures/oak-park1.jpg",
+    "title": "sdfasdfasfd",
+    "text": "asdfadsfsaf",
+    "category": "Cars",
+    "price": null
+  }
+},
+{
+  "model": "advert.advert",
+  "pk": 10,
+  "fields": {
+    "created_at": "2021-08-21T12:01:30.282Z",
+    "updated_at": "2021-08-21T12:01:30.282Z",
+    "publicated_at": null,
+    "moderated_at": false,
+    "user": 1,
+    "picture": "pictures/metro-exodus-7c_SEbto85.jpg",
+    "title": "sfasdfasfasf",
+    "text": "sdgasdgagasgags",
+    "category": "Other",
+    "price": "123.00"
+  }
+},
+{
+  "model": "advert.advert",
+  "pk": 11,
+  "fields": {
+    "created_at": "2021-08-21T12:15:33.977Z",
+    "updated_at": "2021-08-21T12:16:01.430Z",
+    "publicated_at": null,
+    "moderated_at": true,
+    "user": 2,
+    "picture": "pictures/heCexw4bBBg.jpg",
+    "title": "sdfasdfasfd",
+    "text": "asdfdsafsadfsadf",
+    "category": "Other",
+    "price": "500.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$OYCRRk21UuNDOzuHBtUj3z$3P2Wpxo53x131ADaUv6rcpRfho4Qez07UbB996YZxpM=",
+    "last_login": "2021-08-21T12:34:52.433Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-08-21T08:26:14.168Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$WC2rY20nr49wgGYYAkx0Cd$2RpaB9xr5YhOvclvexzYIdpjbLacrFCh2OKlmhwGjq4=",
+    "last_login": "2021-08-21T12:16:20.631Z",
+    "is_superuser": false,
+    "username": "ABOBA",
+    "first_name": "ABOBA",
+    "last_name": "ABOBA",
+    "email": "coolmatoff@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T11:31:17.997Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
